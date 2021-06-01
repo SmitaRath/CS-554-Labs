@@ -1,0 +1,13 @@
+ <div>
+ <form action="/search" method = "POST" class="form-class">
+    <label for="search-bar">
+      Search Bar
+    </label>
+    <input type="text" id="search-bar" name="searchTerm" placeholder="keyword"/>
+    <button type="submit">Search</button>
+    <a href="/popularsearches">Popular Searches</a>
+    </form>
+    {{#if hasErrors}}
+    <p class="{{className}}">{{message}}</p>
+    {{/if}}
+</div>

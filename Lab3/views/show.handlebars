@@ -1,0 +1,37 @@
+<main>
+     {{> search}}
+    <div class="show-div">
+        <h1>{{show.name}}</h1>
+         {{#if show.image.medium}}
+         <img class = "imgbox" src ="{{show.image.medium}}" alt="{{show.name}}"/>
+         {{else}}
+         <img class = "imgbox" src="../public/img/noimage.png" alt="{{show.name}}"/>
+         {{/if}}
+         <dl>
+            <dt>Languague</dt>
+            <dd>{{show.language}}</dd>
+            <dt>Genres</dt>
+            <dd>
+                 <ul>
+                 {{#each show.genres}}
+                 <li>{{this}}</li>
+                 {{/each}}
+                 </ul>
+            </dd>
+            <dt>Average Rating</dt>
+            <dd>{{show.rating.average}}</dd>
+            <dt>Network</dt>
+            <dd>{{show.network.name}}</dd>
+            <dt>status</dt>
+            <dd>{{show.status}}</dd>
+            <dt>runtime</dt>
+            <dd>{{show.runtime}}</dd>
+            <dt>premiered</dt>
+            <dd>{{show.premiered}}</dd>
+            <dt>type</dt>
+            <dd>{{show.type}}</dd>
+            <dt>Summary</dt>
+            <dd>{{show.summary}}</dd>
+        </dl>
+    </div>
+</main>

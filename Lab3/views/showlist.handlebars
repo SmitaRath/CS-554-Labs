@@ -1,0 +1,8 @@
+<main>
+   {{> search}}
+    <ul class="multiple-list">
+     {{#each shows}}
+        <li><a href="/show/{{this.id}}">{{this.name}}</a></li>
+      {{/each}}
+    </ul>
+</main>
